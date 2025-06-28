@@ -26,6 +26,7 @@ const eslintConfig = [
       "src/generated/index.ts",
       "eslint.config.mjs",
       "src/hooks/**",
+      "src/components/ui/**",
     ],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
