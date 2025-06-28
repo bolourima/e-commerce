@@ -1,0 +1,55 @@
+# Queries
+
+query GetProducts {
+  products {
+    id
+    title
+    slug
+    price
+    description
+    category {
+      id
+      name
+    }
+    images
+  }
+}
+
+query GetProductsByTitle($title: String) {
+  products(title: $title) {
+    id
+    title
+    slug
+    price
+    description
+    category {
+      id
+      name
+    }
+    images
+    creationAt
+    updatedAt
+  }
+}
+
+query getProductById($productId: ID!) {
+  product(id: $productId) {
+    id
+    title
+    price
+    description
+    category {
+      name
+      id
+    }
+    images
+  }
+}
+
+query GetCategories {
+  categories {
+    id
+    name
+    image
+  }
+}
